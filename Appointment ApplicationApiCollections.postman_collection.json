@@ -1,0 +1,174 @@
+{
+	"info": {
+		"name": "Appointment ApplicationApiCollections",
+		"_postman_id": "602c6098-a992-f8bd-9615-1a6ed9bf9ddd",
+		"description": "This Collection consist of APIs of Appointment Application !!!",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create New Appointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n   \r\n    \"appointmentDate\": \"2022-09-15\",  \r\n    \"appointmentStartTime\": \"20:00:00\",  \r\n    \"appointmentEndTime\": \"21:00:00\" ,\r\n    \"durationOfTime\":\"01:00:00\",\r\n    \"name\":\"Mithilesh\",\r\n    \"purposeOfAppointment\":\"Meeting\"\r\n}   "
+				},
+				"url": {
+					"raw": "http://localhost:8082/appointments/createAppointment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"appointments",
+						"createAppointment"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get All Appointments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8082/appointments/getAllAppointment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"appointments",
+						"getAllAppointment"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ListOfAppointment In DateRange",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8082/appointments/time?startDate=2021-02-15&endDate=2025-02-15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"appointments",
+						"time"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2021-02-15",
+							"equals": true
+						},
+						{
+							"key": "endDate",
+							"value": "2025-02-15",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Appointment",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n    \"appointmentDate\": \"2025-02-15\",  \r\n    \"appointmentStartTime\": \"20:00:00\",  \r\n    \"appointmentEndTime\": \"21:00:00\" ,\r\n    \"durationOfTime\":\"01:00:00\",\r\n    \"name\":\"D\",\r\n    \"purposeOfAppointment\":\"SHSDKJBDFJK\"\r\n}   "
+				},
+				"url": {
+					"raw": "http://localhost:8082/appointments/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"appointments",
+						"update",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Appointment",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n    \"appointmentDate\": \"2025-02-15\",  \r\n    \"appointmentStartTime\": \"20:00:00\",  \r\n    \"appointmentEndTime\": \"21:00:00\" ,\r\n    \"durationOfTime\":\"01:00:00\",\r\n    \"name\":\"D\",\r\n    \"purposeOfAppointment\":\"SHSDKJBDFJK\"\r\n}   "
+				},
+				"url": {
+					"raw": "http://localhost:8082/appointments/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"appointments",
+						"update",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
